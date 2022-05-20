@@ -1,15 +1,20 @@
 package topUpGame
 
 context Valorant::Valorant(idAkun: String, jumlahPoint: integer)
+    post : self.idAkun = idAkun
+            and self.jumlahPoint = jumlahPoint
+            and self.hargaPoint = 120 * jumlahPoint
 
 context Valorant::getNamaGame() : String
-    post: result = "Valorant"
+    post : result = "Valorant"
 
-context Valorant::getIdAkun()
+context Valorant::getIdAkun() : String
+    post : result = self.idAkun
 
-context Valorant::getJumlahPoint()
+context Valorant::getJumlahPoint() : Integer
+    post : result = self.jumlahPoint
 
-context Valorant::getHargaPoint()
-
+context Valorant::getHargaPoint() : Integer
+    post : result = self.hargaPoint
 
 endpackage

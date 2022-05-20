@@ -8,5 +8,10 @@ context Ovo::getNamaDompet() : String
 context Ovo::getSaldo() : Integer
 
 context Ovo::bayar(tagihan: Integer)
-
+    init : false
+    inv : self.saldo >= 0
+    pre : self.getSaldo() >= tagihan
+    post : self@pre.getSaldo() - self.getSaldo = tagihan
+         and result = true
+         
 endpackage

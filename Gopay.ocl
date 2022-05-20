@@ -11,7 +11,11 @@ context Gopay::getNamaDompet() : String
     post : result = "Gopay"
 
 context Gopay::bayar() : Boolean
-
+    init : false
+    inv : self.saldo >= 0
+    pre : self.getSaldo() >= tagihan
+    post : self@pre.getSaldo() - self.getSaldo = tagihan
+         and result = true
 
 
 endpackage
