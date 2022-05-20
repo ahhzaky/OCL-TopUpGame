@@ -1,0 +1,19 @@
+package topUpGame
+
+context Dana::Dana()
+    post : self.saldo = 0
+
+context Dana::getNamaDompet() : String
+    post : result = "Dana"
+
+context Dana::getSaldo() : Integer 
+    post : result = self.saldo 
+
+context Dana::bayar(tagihan: Integer) : Boolean
+    init : false
+    inv : self.saldo >= 0
+    pre : self.getSaldo() >= tagihan
+    post : self@pre.getSaldo() - self.getSaldo = tagihan
+         and result = true
+
+endpackage

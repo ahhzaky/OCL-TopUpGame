@@ -1,0 +1,13 @@
+package topUpGame
+
+context Aplikasi::Aplikasi()
+
+context Aplikasi::connectTo (game : IGameOnline, dompet: IDompetDigital )
+    post : self.game = game and self.dompet = dompet
+
+context Aplikasi::beli() : Boolean
+    init : false
+    inv  : self.  
+    pre  : self.
+
+endpackage

@@ -1,0 +1,12 @@
+package topUpGame
+
+context Ovo::Ovo(saldo : integer)
+
+context Ovo::getNamaDompet() : String
+    post: result = "Ovo"
+
+context Ovo::getSaldo() : Integer
+
+context Ovo::bayar(tagihan: Integer)
+
+endpackage

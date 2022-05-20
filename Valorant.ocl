@@ -1,0 +1,15 @@
+package topUpGame
+
+context Valorant::Valorant(idAkun: String, jumlahPoint: integer)
+
+context Valorant::getNamaGame() : String
+    post: result = "Valorant"
+
+context Valorant::getIdAkun()
+
+context Valorant::getJumlahPoint()
+
+context Valorant::getHargaPoint()
+
+
+endpackage

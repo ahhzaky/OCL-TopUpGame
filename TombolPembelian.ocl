@@ -1,0 +1,17 @@
+package topUpGame
+
+context TombolPembelian::TombolPembelian()
+    post : self.aplikasi = null
+
+context TombolPembelian::confirm()
+    pre  : self.apliaksi <> null
+    post : if cart.beli() = true
+                then print "Pembelian Berhasil!"
+            else
+                print "Pembelian Gagal!"
+
+context TombolPembelian::connectTo(aplikasi : IPembelian)
+    post : this.aplikasi = aplikasi
+
+
+endpackage
