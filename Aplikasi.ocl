@@ -8,7 +8,10 @@ context Aplikasi::connectTo (game : IGameOnline, dompet: IDompetDigital )
 
 context Aplikasi::beli() : Boolean
     init : false
-    inv  : self.  
-    pre  : self.
-
+    pre  : self.dompet <> null 
+            and self.game <> null
+    post : if self@pre.dompet
+                then result = statusBeli
+            else
+                print "Harap memilih game dan metode pembayaran terlebih dahulu"
 endpackage

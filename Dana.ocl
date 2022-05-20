@@ -6,10 +6,10 @@ context Dana::Dana()
 context Dana::getNamaDompet() : String
     post : result = "Dana"
 
-context Dana::getSaldo() : Integer 
+context Dana::getSaldo() : Int 
     post : result = self.saldo 
 
-context Dana::bayar(tagihan: Integer) : Boolean
+context Dana::bayar(tagihan: Int) : Boolean
     init : false
     inv : self.saldo >= 0
     pre : self.getSaldo() >= tagihan

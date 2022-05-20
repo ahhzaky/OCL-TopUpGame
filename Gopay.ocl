@@ -2,13 +2,13 @@ package topUpGame
 
 
 
-context Gopay::Gopay(saldo: Integer)
+context Gopay::Gopay(saldo: Int)
     post : self.saldo = saldo
 
 context Gopay::getNamaDompet() : String
     post : result = "Gopay"
 
-context Gopay::getSaldo() : Integer
+context Gopay::getSaldo() : Int
     post : self.saldo
 
 context Gopay::bayar() : Boolean
