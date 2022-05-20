@@ -10,7 +10,7 @@ context Aplikasi::beli() : Boolean
     init : false
     pre  : self.dompet <> null 
             and self.game <> null
-    post : if self@pre.dompet
+    post : if self@pre.dompet <> null and self.game <> null
                 then result = statusBeli
             else
                 print "Harap memilih game dan metode pembayaran terlebih dahulu"
