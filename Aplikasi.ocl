@@ -1,6 +1,7 @@
 package topUpGame
 
 context Aplikasi::Aplikasi()
+    post : self.game = null and self.dompet = null
 
 context Aplikasi::connectTo (game : IGameOnline, dompet: IDompetDigital )
     post : self.game = game and self.dompet = dompet
