@@ -1,11 +1,13 @@
 package topUpGame
 
 context Ovo::Ovo(saldo : integer)
+    post : self.saldo = saldo
 
 context Ovo::getNamaDompet() : String
     post: result = "Ovo"
 
 context Ovo::getSaldo() : Integer
+    post : self.saldo
 
 context Ovo::bayar(tagihan: Integer)
     init : false
@@ -13,5 +15,5 @@ context Ovo::bayar(tagihan: Integer)
     pre : self.getSaldo() >= tagihan
     post : self@pre.getSaldo() - self.getSaldo = tagihan
          and result = true
-         
+
 endpackage

@@ -1,14 +1,15 @@
 package topUpGame
 
 
-context Gopay::Gopay()
-    post : self.saldo = 0
 
-
-context Gopay::Gopay(ammount: Real)
+context Gopay::Gopay(saldo: Integer)
+    post : self.saldo = saldo
 
 context Gopay::getNamaDompet() : String
     post : result = "Gopay"
+
+context Gopay::getSaldo() : Integer
+    post : self.saldo
 
 context Gopay::bayar() : Boolean
     init : false

@@ -1,7 +1,7 @@
 package topUpGame
 
 context Dana::Dana()
-    post : self.saldo = 0
+    post : self.saldo = saldo
 
 context Dana::getNamaDompet() : String
     post : result = "Dana"
